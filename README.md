@@ -1,2 +1,1 @@
-# DataAnalytics
-MS Data Analytics
+# Data Science
