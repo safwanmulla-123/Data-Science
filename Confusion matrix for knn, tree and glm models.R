@@ -1,3 +1,5 @@
+# Confusion Matrix for knn, tree, and glm models
+
 #load packages
 library(tibble)
 library(dplyr)
@@ -8,7 +10,7 @@ library(cvms)
 
 #load and prep data
 
-wrk_data = na.omit(as_tibble(read.csv("/Users/safwan/Downloads/NEC/Machine Learning/Case 1 Santander Bank Data/Santander CSVs/train.csv")))
+wrk_data = na.omit(as_tibble(read.csv("/train.csv")))
 
 #converting the target column to factor data type
 wrk_data$target = as.factor(wrk_data$target)
@@ -127,7 +129,7 @@ knn_eval_glm$Predictions
 #confusion matrix plot for glm model
 plot_confusion_matrix(knn_eval_glm$`Confusion Matrix` [[1]])
 
-#Comparing the Confusion matrix from the 3 models tried, only knn model seems to fit. 
+#Comparing the Confusion matrix from the 3 models tried, knn model seems to fit best. 
 
 
 
